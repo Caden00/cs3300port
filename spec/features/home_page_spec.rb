@@ -5,8 +5,10 @@ RSpec.feature "HomePages", type: :feature do
 end
 
 RSpec.feature "Visiting the homepage", type: :feature do
+  # Go to home page
   scenario "The visitor should see projects" do
     visit root_path
+    # Verify the the page has projects text
     expect(page).to have_text("Projects")
   end
 end
