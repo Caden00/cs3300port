@@ -26,9 +26,6 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# test gem
-gem 'therubyracer', '0.10.2', :platforms => :ruby
-
 gem 'mini_racer'
   
   group :development, :test do
