@@ -29,9 +29,9 @@ gem 'jbuilder', '~> 2.5'
 
 #gem 'mini_racer'
   
-  #group :development, :test do
-    #gem 'rspec-rails', '~> 3.7'
-  #end
+group :development, :test do
+  gem 'rspec-rails', '~> 3.7'
+end
 
 
 group :production do
