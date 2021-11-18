@@ -1,6 +1,12 @@
+<!-- This is like the template for all the pages -->
+
 <!DOCTYPE html>
 <html>
   <head>
+    <%= user_signed_in? %>
+    <%= current_user %>
+    <%= user_session %>
+
     <title>PortfolioProject</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,5 +17,6 @@
 
   <body>
     <%= yield %>
+
   </body>
 </html>
