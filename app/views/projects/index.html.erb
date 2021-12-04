@@ -1,29 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Projects</h1>
+<div class="container-fluid">
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white box-shadow">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Projects</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark">
+        <%= link_to 'New Project', new_project_path %>
+      </a>
+    </nav>
+  </div>
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="card-deck">
 
-<br>
-
-<%= link_to 'New Project', new_project_path %>
+      <% @projects.each do |project| %>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="card">
+            <div class="card-body">
+                <a <h5 class="card-title"><%=project.title%></h5></a>
+                <p><%=project.description%></p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted"><%=link_to 'Show', project%></small> |
+                <small class="text-muted"><%=link_to 'Edit', edit_project_path(project)%></small> |
+                <small class="text-muted"><%=link_to 'Destory', project, method: :delete, data: { confirm: 'Are you sure?' }%></small>
+            </div>
+          </div> 
+        </div>
+      <% end %>
+    </div>
+</div>
