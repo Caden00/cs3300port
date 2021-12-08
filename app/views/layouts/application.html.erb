@@ -21,8 +21,8 @@
           <a class="p-2 text-dark">
             <% if user_signed_in? %>
               <a class="p-2 text-dark"><%= current_user.email %></a>
-              <%= link_to 'Edit profile', edit_user_registration_path, :class => 'btn btn-dark' %>
-              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn btn-dark'%>
+              <%= link_to 'Edit profile', edit_user_registration_path, :class => 'btn btn-dark btn-sm' %>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn btn-dark btn-sm'%>
             <% else %>
               <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
               <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
