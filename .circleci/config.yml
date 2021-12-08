@@ -19,3 +19,7 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build
+
+database:
+override:
+- bundle exec rails db:create; bundle exec rails db:migrate; bundle exec rails db:migrate RAILS_ENV=test
